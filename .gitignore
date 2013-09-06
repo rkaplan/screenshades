@@ -12,3 +12,12 @@ logs
 results
 
 npm-debug.log
+
+node_modules/
+*.swp
+*.env
+*.DS_Store
+
+public/upload
+bin/
+config.json

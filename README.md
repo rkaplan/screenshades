@@ -1,4 +1,4 @@
 PennApps
 ========
 
-Out awesome PennApps thing.
+Our awesome PennApps thing.
