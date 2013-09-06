@@ -22,13 +22,13 @@
 
   mongoose.connect(conf.get("mongo"));
 
-  setupHbs();
 
   mongoose.connection.on("open", function(){
+    setupHbs();
     var sessionStore = new MongoStore({db: mongoose.connection.db});
     // all environments
     app.set('port', conf.get("PORT"));
-    app.set('views', __dirname + '/views');
+    app.set('views', __dirname + '/templates');
     app.set('view engine', 'hbs');
     app.use(express.favicon());
     app.use(express.logger('dev'));
