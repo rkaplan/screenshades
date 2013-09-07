@@ -31,6 +31,27 @@
     auth: String
   });
 
-  exports.User       = mongoose.model("User", User);
-  exports.DeviceAuth = mongoose.model("DeviceAuth", DeviceAuth);
+  var Show = new Schema({
+    name:     String,
+    picture:  String
+  });
+
+  var Episode = new Schema({
+    show: ObjectId,
+    season: Number,
+    episode: Number,
+    corpus: String,
+    description: String
+  });
+
+  var ShowProgress = new Schema({
+    owner: ObjectId,
+    lastEpisode: ObjectId
+  });
+
+  exports.User         = mongoose.model("User", User);
+  exports.DeviceAuth   = mongoose.model("DeviceAuth", DeviceAuth);
+  exports.Show         = mongoose.model("Show", Show);
+  exports.Episode      = mongoose.model("Episode", Episode);
+  exports.ShowProgress = mongoose.model("ShowProgress", ShowProgress);
 }());

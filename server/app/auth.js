@@ -33,6 +33,17 @@
           next();
         });
       };
+    } else  if (level === 2){
+      return function(req, res, next){
+        // check if they're admin...
+        var auth = req.get("X-SHADES-AUTH");
+        if (auth === conf.get("admin")){
+          req.session.admin = true;
+          next();
+        } else {
+          return res.json(401);
+        }
+      };
     }
   };
 
