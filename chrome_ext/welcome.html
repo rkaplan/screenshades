@@ -3,6 +3,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/welcome.js"></script>
 </head>
 <body>
 <div class="container">
@@ -11,19 +13,63 @@
         <h3>ScreenShades protects you from spoiling your favorite TV shows.</h3>
     </div>
 
-    <div class="box-signup">
-        <form class="form-signup">
-            <input type="text" class="form-control" placeholder="Email" autofocus="">
-            <input type="password" class="form-control" placeholder="Password">
-            <button class="btn btn-lg email-signup" type="submit">Sign up with email</button>
-            <span id="or" class="smallcaps">OR</span>
-            <button class="btn btn-lg fb-signup" type="submit">Sign up with Facebook</button>
-        </form>
+    <div class="content">
+        <div class="box-scroll-view">
+            <div class="boxes animated">
 
-        <div class="footer">
-            <span class="smallcaps">ALREADY HAVE AN ACCOUNT? <a href="login.html"><strong>CLICK HERE</strong></a></span>
+                <div class="box-1">
+                    <form class="form-signup" onsubmit="return false;">
+                        <input type="text" class="form-control" placeholder="Email" autofocus="">
+                        <input type="password" class="form-control" placeholder="Password">
+                        <button class="btn btn-lg email-signup" type="button">Sign up with email</button>
+                        <span id="or" class="smallcaps">OR</span>
+                        <button class="btn btn-lg fb-signup" type="button">Sign up with Facebook</button>
+                    </form>
+
+                    <div class="account-already">
+                        <span class="smallcaps">ALREADY HAVE AN ACCOUNT? <a href="login.html"><strong>CLICK HERE</strong></a></span>
+                    </div>
+                </div><div class="box-2">
+                    <div class="status-bar">
+                        <div class="button-box">
+                            <div class="circular-button-1 active"></div>
+                            <div class="circular-button-2"></div>
+                            <div class="circular-button-3"></div>
+                        </div>
+                        <h3>Welcome! First, we need to know what shows you're watching.</h3>
+
+                        <div class="next-button"><h3>NEXT &gt;&gt;</h3></div>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div><div class="box-3">
+                    <div class="status-bar">
+                        <div class="button-box">
+                            <div class="circular-button-1"></div>
+                            <div class="circular-button-2 active"></div>
+                            <div class="circular-button-3"></div>
+                        </div>
+                        <h3>Next, we need to know how far you are in each show.</h3>
+
+                        <div class="next-button"><h3>NEXT &gt;&gt;</h3></div>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div><div class="box-4">
+                    <div class="status-bar">
+                        <div class="button-box">
+                            <div class="circular-button-1"></div>
+                            <div class="circular-button-2"></div>
+                            <div class="circular-button-3 active"></div>
+                        </div>
+                        <h3>Awesome! We'll take it from here now.</h3>
+
+                        <div class="next-button"><h3>NEXT &gt;&gt;</h3></div>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </box>
+    </div>
 
 </body>
 </html>
