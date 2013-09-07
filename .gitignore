@@ -13,4 +13,11 @@ results
 
 npm-debug.log
 
-.DS_Store
+node_modules/
+*.swp
+*.env
+*.DS_Store
+
+public/upload
+bin/
+config.json
