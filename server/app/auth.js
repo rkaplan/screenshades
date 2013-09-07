@@ -1,9 +1,9 @@
 (function(){
   "use strict";
 
-  var handler;
+  var handler, checkAuth;
 
-  handler = function(conf, level){
+  handler = function(conf, schemas, level){
     if (level === -1){
       return function(req, res, next){
         if (req.session.valid){
@@ -26,16 +26,24 @@
       };
     } else if (level === 1){
       return function(req, res, next){
-        if (req.session.valid){
-          res.loggedIn = true;
-        } else {
-          res.loggedIn = false;
-          req.session.flash = ["Sorry, please login below to do that."];
-          return res.redirect("/login");
-        }
-        next();
+        var user = checkAuth(schemas, req.get("X-SHADES-AUTH"), function(err, user){
+          if (err){ return res.json(401, {err: err}) }
+
+          req.session.userId = user;
+          next();
+        });
       };
     }
+  };
+
+  checkAuth = function(schemas, authString, cb){
+    schemas.DeviceAuth.findOne({auth: authString}, function(err, deviceAuth){
+      if (err){
+        console.log(err);
+        return cb({status: 401});
+      }
+      return cb(null, deviceAuth.user);
+    });
   };
 
   module.exports = handler;

@@ -67,7 +67,7 @@
           });
         }
 
-        params.push(auth(conf, route[4]));
+        params.push(auth(conf, schemas, route[4]));
 
         app[method](route[0], params, route[1]);
       });
