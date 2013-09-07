@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Input</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+
+<button type="button" onclick="fetch();">Fetch stuff</button>
+
+<div id="results"></div>
+
+<script type="text/javascript">
+	function fetch() { 
+		$.ajax({
+			// breaking bad episodes
+			url: 'http://apify.heroku.com/api/all_breaking_bad_episodes.json',
+			success: function(data){
+				// $('#results').html(JSON.stringify(data));
+			}
+		})
+		$.ajax({
+			// tweets
+			url: 'https://api.twitter.com/1.1/search/tweets.json',
+			data: {
+				q: 'breaking bad #spoiler',
+				count: 100
+			},
+			headers: {
+				Authorization: 'Bearer AAAAAAAAAAAAAAAAAAAAAJoMTQAAAAAAT%2FPSdfp9Hh5tDPPnJ9UlQTokHWY%3DJGg4pQ5NkGtH4GlyBDVy0wEHWQfpAiS24PgaYG22k'
+			},
+			success: function(data){
+				console.log(data['statuses'].length);
+				var x = [];
+				for (var i = data['statuses'].length - 1; i >= 0; i--) {
+					x.push({
+						tweet: data['statuses'][i]['text'],
+						handle: data['statuses'][i]['user']['screen_name'],
+						date: data['statuses'][i]['created_at']
+					})
+				};
+				$('#results').append('<br/><br/><br/>');
+				for (var i = x.length - 1; i >= 0; i--) {
+					$('#results').append(JSON.stringify(x[i]) + '<br/>');
+					console.log(x[i]);
+				};
+			}
+		})
+		return false;
+	}
+</script>
+
+</body>
+</html>
