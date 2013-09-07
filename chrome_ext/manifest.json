@@ -7,13 +7,13 @@
             "128": "icons/icon128.png" },
 
   "background": {
-    "scripts": ["jquery.min.js", "background.js"]
+    "scripts": ["js/jquery.min.js", "js/bootstrap.min.js", "js/background.js"]
   },
   "content_scripts": [
     {
       "all_frames": true,
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["content_script.js"]
+      "js": ["js/content_script.js"]
     }
   ],
   "browser_action": {
