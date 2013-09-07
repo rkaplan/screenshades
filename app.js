@@ -7,6 +7,7 @@
   var express     = require('express'),
       routes      = require('./routes').routes,
       user        = require('./routes/user'),
+      auth        = require("./app/auth.js"),
       http        = require('http'),
       hbs         = require("hbs"),
       schemas     = require("./app/schemas.js"),
@@ -48,7 +49,7 @@
     }
 
     _.each(routes, function(route){
-      var methods = route[6] || ["get"];
+      var methods = route[5] || ["get"];
       methods.forEach(function(method){
         var params = [];
 
@@ -65,6 +66,8 @@
             next();
           });
         }
+
+        params.push(auth(conf, route[4]));
 
         app[method](route[0], params, route[1]);
       });
