@@ -7,7 +7,7 @@
             "128": "icons/icon128.png" },
 
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["jquery.min.js", "background.js"]
   },
   "content_scripts": [
     {
