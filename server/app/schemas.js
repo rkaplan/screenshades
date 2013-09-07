@@ -40,8 +40,10 @@
     show: ObjectId,
     season: Number,
     episode: Number,
+    name: String,
     corpus: String,
-    description: String
+    description: String,
+    netflixId: String
   });
 
   var ShowProgress = new Schema({
