@@ -1,0 +1,111 @@
+@font-face {
+  font-family: FreightSansBook;
+  src: url("../fonts/FreightSansBook.otf") format("opentype");
+}
+
+@font-face {
+  font-family: FreightSansSemiBold;
+  src: url("../fonts/FreightSansSemiBold.otf") format("opentype");
+}
+
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #102235;
+
+  font-family: 'FreightSansBook', sans-serif;
+  font-size: 14px;
+  color: #fff;
+}
+
+h1, h2, h3 {
+  font-family: 'FreightSansBook', sans-serif;
+  font-weight: lighter;
+}
+strong {
+  font-family: 'FreightSansSemiBold', sans-serif;
+  font-weight: lighter;
+}
+h1 {
+  font-size: 40px;
+  letter-spacing: 9px;
+}
+h3 {
+  font-size: 18px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: #0053a7;
+  text-decoration: none;
+}
+
+.header, .footer {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.form-signup {
+  max-width: 505px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  text-align: center;
+
+  background-color: #07182a;
+  border: 0px;
+  border-radius: 10px;
+
+  overflow: auto;
+  width: 100%
+}
+
+.form-signup .form-control {
+  margin-bottom: 15px;
+  border: 0px;
+  border-radius: 5px;
+  padding: 21px 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #000c18;
+}
+
+.form-signup .form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/*.form-signup input[type="password"] {
+  letter-spacing: 5px;
+}*/
+
+.form-signup button, .form-signup button:hover {
+  width: 203px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+
+.form-signup button.email-signup { 
+  float: left;
+  background-color: #3b6800;
+}
+.form-signup button.fb-signup { 
+  float: right;
+  background-color: #0053a7;
+}
+
+.form-signup #or {
+  position: relative;
+  top: 12px;
+}
+
+.smallcaps {
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}

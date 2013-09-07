@@ -1,0 +1,31 @@
+{
+  "name": "ScreenShades",
+  "version": "0.1",
+  "description": "Be protected from TV spoilers.",
+  "icons": { "16": "icons/icon16.png",
+             "48": "icons/icon48.png",
+            "128": "icons/icon128.png" },
+
+  "background": {
+    "scripts": ["js/jquery.min.js", "js/bootstrap.min.js", "js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/content_script.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Action Title",     // optional; shown in tooltip
+    "default_popup": "popup.html"    // optional
+  },
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+
+  "options_page": "options.html",
+
+  "manifest_version": 2
+}
