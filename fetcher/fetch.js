@@ -2,10 +2,9 @@
 var jsdom = require("jsdom");
 
 jsdom.env(
-  "http://en.wikipedia.org/wiki/seinfeld_episodes",
+  "http://en.wikipedia.org/wiki/breaking_bad_episodes",
   ["http://code.jquery.com/jquery.js"],
   function (errors, window) {
-    // console.log("there have been", window.$("a").length, "nodejs releases!");
 	var episode_num = {};
 	var next_episode = 1;
 	var seasons = window.$(window.$(window.$('.wikitable')[0]).find('tr'));
@@ -17,17 +16,20 @@ jsdom.env(
 		};
 		next_episode = episode_amount + next_episode;
 	};
-	// console.log(episode_num);
 	console.log('next');
 
 	var episodes = window.$('.vevent');
 	var episodes_parsed = [];
 	var x = [];
+
 	for (var i = episodes.length - 1; i >= 0; i--) {
+		if (!(parseInt(window.$(window.$(window.$('.vevent')[i]).find("td")[0]).text()) > 0)){
+			continue;
+		}
 		episodes_parsed.push({
 			title: window.$(window.$(window.$('.vevent')[i]).find("td")[1]).text(),
-			number: window.$(window.$('.vevent th')[i]).text(),
-			date: window.$(window.$(window.$('.vevent')[i]).find("td")[4]).text(),
+			total_number: window.$(window.$('.vevent th')[i]).text(),
+			date: (window.$(window.$(window.$(window.$('.vevent')[i]).find("td")[4]).find("span")).text()).split(')')[1],
 			season: episode_num[window.$(window.$('.vevent th')[i]).text()],
 			episode_number: window.$(window.$(window.$('.vevent')[i]).find("td")[0]).text()
 		})
@@ -35,3 +37,4 @@ jsdom.env(
 	console.log(episodes_parsed);
   }
 );
+
