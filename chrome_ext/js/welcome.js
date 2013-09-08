@@ -10,14 +10,13 @@ $(document).ready(function() {
 			(-1 * boxSize * amount) + 'px');
 	}
 
+	// transition hooks:
 	$('.email-signup').click(function(e) {
 		scroll(1);
 	});
-
 	$('.next-button').click(function(e) {
 		scroll(1);
 	});
-
 	$('.circular-button-1').click(function(e) {
 		scroll(1, true);
 	});
@@ -27,5 +26,24 @@ $(document).ready(function() {
 	$('.circular-button-3').click(function(e) {
 		scroll(3, true);
 	});
+
+	// search bar dropdown:
+	/*
+	$('#search-shows').typeahead([
+	{
+		name: 'Click here to search for TV shows to add',
+		local: [
+			"Mercury", 
+			"Venus", 
+			"Earth", 
+			"Mars", 
+			"Jupiter", 
+			"Saturn", 
+			"Uranus", 
+			"Neptune"
+		]
+	}
+	]);
+	*/
 })
 
