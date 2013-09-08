@@ -18,6 +18,14 @@ body {
   color: #fff;
 }
 
+#logo {
+  width: 47px;
+  height: 36px;
+  background: url('../icons/logo-main.png') no-repeat;
+  margin: 0px auto;
+  margin-top: 30px;
+}
+
 h1, h2, h3 {
   font-family: 'FreightSansBook', sans-serif;
   font-weight: lighter;
@@ -112,6 +120,7 @@ ul.ui-autocomplete li {
 
 .status-bar .button-box {
   position: relative;
+  left: -8px;
   top: 16px;
   width: 175px;
   float: left;
@@ -138,34 +147,55 @@ ul.ui-autocomplete li {
   width: 175px;
   float: right;
   cursor: pointer;
+  text-align: right;
+  padding-right: 20px;
 }
 
 .title-bar {
-  height: 60px;
+  height: 50px;
   width: 100%;
-  background-color: #07182a;
+  background-color: #1a2b3d;
+}
+
+.title-bar-dark {
+  height: 50px;
+  width: 100%;
+  background-color: #0d1722;
+}
+
+.title-bar-dark .title-text {
+  margin: 0;
+  border: 0px;
+  border-radius: 0px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  /*background-color: #07182a;*/
 }
 
 .available-shows {
-  height: 100px;
+  height: 110px;
   width: 940px;
-  background-color: #071728;
+  background-color: #1a2b3d;
 }
 
 .my-shows {
-  height: 100px;
+  height: 110px;
   width: 940px;
-  background-color: #051221;
+  background-color: #0d1722;
 }
 
 .tv-show {
-  padding: 10px;
+  padding: 10px 10px 10px 1px;
+  margin-left: 9px;
   width: 220px;
   height: 100px;
   display: inline-block;
   cursor: pointer;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  -webkit-transition: background-color .2s ease;
   /*border: 1px solid #fff;*/
 }
 
@@ -183,10 +213,11 @@ ul.ui-autocomplete li {
   top: 10px;
   font-size: 18px;
   font-weight: lighter; 
+  cursor: pointer;
 }
 
 .tv-show .show-subtitle {
-  display: inline-block;
+  display: block;
   position: relative;
   top: 5px;
   margin: 0;
@@ -200,16 +231,13 @@ ul.ui-autocomplete li {
   position: relative;
   top: 6px;
   font-weight: bolder;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 2px;
   margin: 0;
 }
 
-.available-shows .tv-show:first-child {
-  border-top-left-radius: 0px;
-}
 .available-shows .tv-show:hover {
-  background-color: #051221;
+  background-color: #0d1722;
 }
 .available-shows .tv-show .show-action {
   color: #88ba00;
@@ -218,8 +246,6 @@ ul.ui-autocomplete li {
 .my-shows .tv-show .show-action {
   color: #ff3b30;
 }
-
-
 
 .box-2 .status-bar {
   background-color: #007aff;
@@ -250,10 +276,10 @@ ul.ui-autocomplete li {
   margin: 0;
   border: 0px;
   border-radius: 0px;
-  padding: 5px 12px;
+  padding: 4px 12px 5px 12px;
   font-size: 16px;
   color: #fff;
-  background-color: #07182a;
+  background-color: transparent;
 }
 
 .tt-hint {
@@ -290,7 +316,7 @@ ul.ui-autocomplete li {
 
 .box-1 .form-signup {
   max-width: 505px;
-  padding: 15px;
+  padding: 18px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
@@ -339,3 +365,92 @@ ul.ui-autocomplete li {
  * BOX 2 SPECIFIC STUFF: 
  * 
  */
+
+.tv-active {
+  background-color: #0d1722;
+  height: 110px;
+}
+
+.title-bar .title-text {
+  margin: 0;
+  border: 0px;
+  border-radius: 0px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.list-seasons {
+  padding: 24px 0px 0px 25px;
+}
+
+.list-seasons li {
+  list-style: none;
+  display: inline;
+  padding-right: 48px;
+  font-size: 18px;
+  color: #ffffff; 
+}
+
+.list-seasons > .list-active {
+  color: #5856d6;
+  font-weight: bolder;
+}
+
+.tv-episodes {
+  height: 110px;
+  width: 940px;
+  background-color: #0d1722;
+}
+
+.tv-episode {
+  padding: 20px 10px 10px 15px;
+  margin-left: 9px;
+  width: 220px;
+  height: 100px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: background-color .2s ease;
+}
+
+.tv-episode .episode-title {
+  position: relative;
+  top: 10px;
+  font-size: 18px;
+  font-weight: lighter; 
+}
+
+.tv-episode .episode-subtitle {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, .5); 
+}
+
+.episode-active > .episode-title {
+  color: #5856d6;
+}
+
+.episode-active > .episode-subtitle {
+  color: #5856d6;
+  }
+
+.container-dark {
+  width: 940px;
+  height: 320px;
+  background-color: #0d1722;
+}
+
+.container-dark > p {
+  text-align: center;
+  font-size: 24px;
+  padding-top: 80px;
+  font-weight: lighter;
+  line-height: 150%;
+}

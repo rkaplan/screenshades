@@ -7,12 +7,14 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/typeahead.js"></script>
     <script src="js/welcome.js"></script>
+    <title>ScreenShades Settings</title>
 </head>
 <body>
 <div class="container">
     <div class="header">
+        <div id="logo"></div>
         <h1>SCREEN<strong>SHADES</strong></h1>
-        <h3>ScreenShades protects you from spoiling your favorite TV shows.</h3>
+        <h3>ScreenShades protects you from spoilers from your favorite TV shows.</h3>
     </div>
 
     <div class="content">
@@ -21,8 +23,8 @@
 
                 <div class="box-1">
                     <form class="form-signup" onsubmit="return false;">
-                        <input type="text" class="form-control" placeholder="Email" autofocus="">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input id="signupEmail" type="text" class="form-control" placeholder="Email" autofocus="">
+                        <input id="signupPassword" type="password" class="form-control" placeholder="Password">
                         <button class="btn btn-lg email-signup" type="button">Sign up with email</button>
                         <span id="or" class="smallcaps">OR</span>
                         <button class="btn btn-lg fb-signup" type="button">Sign up with Facebook</button>
@@ -40,11 +42,11 @@
                         </div>
                         <h3>Welcome! First, we need to know what shows you're watching.</h3>
 
-                        <div class="next-button"><h3>NEXT &gt;&gt;</h3></div>
+                        <div class="next-button"><h3>NEXT</h3>&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></div>
                         <div style="clear: both;"></div>
                     </div>
 
-                    <div class="title-bar search">
+                    <div class="title-bar">
                         <img class="search-icon" src="icons/search.png" />
                         <input id="search-shows" placeholder="Search for shows"/>
                     </div>
@@ -57,29 +59,28 @@
                             <p class="show-action">ADD</p>
                         </div><div class="tv-show">
                             <img class="show-icon" src="http://ia.media-imdb.com/images/M/MV5BMTU2MTgzMzQxNV5BMl5BanBnXkFtZTcwODg4NTQ3OQ@@._V1_SX214_.jpg" />
-                            <label class="show-title">Breaking Bad</label>
+                            <label class="show-title">Weeds</label>
                             <p class="show-subtitle">5 seasons, 62 episodes</p>
                             <p class="show-action">ADD</p>
                         </div><div class="tv-show">
                             <img class="show-icon" src="http://ia.media-imdb.com/images/M/MV5BMTU2MTgzMzQxNV5BMl5BanBnXkFtZTcwODg4NTQ3OQ@@._V1_SX214_.jpg" />
-                            <label class="show-title">Breaking Bad</label>
+                            <label class="show-title">House of Cards</label>
                             <p class="show-subtitle">5 seasons, 62 episodes</p>
                             <p class="show-action">ADD</p>
                         </div><div class="tv-show">
                             <img class="show-icon" src="http://ia.media-imdb.com/images/M/MV5BMTU2MTgzMzQxNV5BMl5BanBnXkFtZTcwODg4NTQ3OQ@@._V1_SX214_.jpg" />
-                            <label class="show-title">Breaking Bad</label>
+                            <label class="show-title">30 Rock</label>
                             <p class="show-subtitle">5 seasons, 62 episodes</p>
                             <p class="show-action">ADD</p>
                         </div>
                     </div>
 
+                    <div class="title-bar-dark">
+                        <div class="title-text">My TV Shows</div>
+                    </div>
+
                     <div class="my-shows">
-                        <div class="tv-show">
-                            <img class="show-icon" src="http://ia.media-imdb.com/images/M/MV5BMTU2MTgzMzQxNV5BMl5BanBnXkFtZTcwODg4NTQ3OQ@@._V1_SX214_.jpg" />
-                            <label class="show-title">Breaking Bad</label>
-                            <p class="show-subtitle">5 seasons, 62 episodes</p>
-                            <p class="show-action">REMOVE</p>
-                        </div>
+                        
                     </div>
                 </div><div class="box-3">
                     <div class="status-bar">
@@ -90,12 +91,65 @@
                         </div>
                         <h3>Next, we need to know how far you are in each show.</h3>
 
-                        <div class="next-button"><h3>NEXT &gt;&gt;</h3></div>
+                        <div class="next-button"><h3>NEXT</h3>&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></div>
                         <div style="clear: both;"></div>
                     </div>
 
-                    <div class="title-bar search">
+                    <div class="title-bar">
+                        <div class="title-text">My TV Shows</div>
+                    </div>
 
+                    <div class="available-shows">
+                        <div class="tv-show tv-active">
+                            <img class="show-icon" src="http://ia.media-imdb.com/images/M/MV5BMTU2MTgzMzQxNV5BMl5BanBnXkFtZTcwODg4NTQ3OQ@@._V1_SX214_.jpg" />
+                            <label class="show-title">Breaking Bad</label>
+                            <p class="show-subtitle">Up to S5 E3</p>
+                            <p class="show-action">ADD</p>
+                        </div><div class="tv-show">
+                            <img class="show-icon" src="http://ia.media-imdb.com/images/M/MV5BMTU2MTgzMzQxNV5BMl5BanBnXkFtZTcwODg4NTQ3OQ@@._V1_SX214_.jpg" />
+                            <label class="show-title">Weeds</label>
+                            <p class="show-subtitle">Up to S3 E2</p>
+                            <p class="show-action">ADD</p>
+                        </div><div class="tv-show">
+                            <img class="show-icon" src="http://ia.media-imdb.com/images/M/MV5BMTU2MTgzMzQxNV5BMl5BanBnXkFtZTcwODg4NTQ3OQ@@._V1_SX214_.jpg" />
+                            <label class="show-title">House of Cards</label>
+                            <p class="show-subtitle">Up to S1 E12</p>
+                            <p class="show-action">ADD</p>
+                        </div><div class="tv-show">
+                            <img class="show-icon" src="http://ia.media-imdb.com/images/M/MV5BMTU2MTgzMzQxNV5BMl5BanBnXkFtZTcwODg4NTQ3OQ@@._V1_SX214_.jpg" />
+                            <label class="show-title">30 Rock</label>
+                            <p class="show-subtitle">Up to S7 E12</p>
+                            <p class="show-action">ADD</p>
+                        </div>
+                    </div>
+
+                    <div class="title-bar-dark">
+                        <ul class="list-seasons">
+                            <li>Season 1</li>
+                            <li>Season 2</li>
+                            <li>Season 3</li>
+                            <li>Season 4</li>
+                            <li class="list-active">Season 5</li>
+                        </ul>
+                    </div>
+
+                    <div class="tv-episodes">
+                        <div class="tv-episode">
+                            <label class="episode-title">Episode 1: "Blood Money"</label>
+                            <p class="episode-subtitle">Aired August 11, 2013</p>
+                        </div>
+                        <div class="tv-episode episode-active">
+                            <label class="episode-title">Episode 2: "Buried"</label>
+                            <p class="episode-subtitle">Aired August 18, 2013</p>
+                        </div>
+                        <div class="tv-episode">
+                            <label class="episode-title">Episode 3: "Confessions"</label>
+                            <p class="episode-subtitle">Aired August 25, 2013</p>
+                        </div>
+                        <div class="tv-episode">
+                            <label class="episode-title">Episode 4: "Rabid Dog"</label>
+                            <p class="episode-subtitle">Aired September 1, 2013</p>
+                        </div>
                     </div>
                 </div><div class="box-4">
                     <div class="status-bar">
@@ -106,8 +160,11 @@
                         </div>
                         <h3>Awesome! We'll take it from here now.</h3>
 
-                        <div class="next-button"><h3>NEXT &gt;&gt;</h3></div>
+                        <div class="next-button"><h3>FINISH</h3>&nbsp;&nbsp;<span class="glyphicon glyphicon-ok"></span></div>
                         <div style="clear: both;"></div>
+                    </div>
+                    <div class="container-dark">
+                        <p>We'll automatically track your progress with shows you watch through Netflix.<br/> Otherwise, check back on ScreenShades often to update your progress!</p>
                     </div>
                 </div>
 
