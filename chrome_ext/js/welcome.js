@@ -17,7 +17,7 @@ $(document).ready(function() {
 		shows.each(function(index) {
 			var el = $(this);
 			var title = el.find('.show-title')[0].innerText;
-			if(title.indexOf(text) === -1) {
+			if(title.toLowerCase().indexOf(text.toLowerCase()) === -1) {
 				el.hide();
 			}
 			else {
