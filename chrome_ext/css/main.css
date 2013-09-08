@@ -179,7 +179,8 @@ ul.ui-autocomplete li {
 }
 
 .tv-show {
-  padding: 10px;
+  padding: 10px 10px 10px 1px;
+  margin-left: 9px;
   width: 220px;
   height: 100px;
   display: inline-block;
@@ -224,7 +225,7 @@ ul.ui-autocomplete li {
 }
 
 .available-shows .tv-show:hover {
-  background-color: #051221;
+  background-color: #0d1722;
 }
 .available-shows .tv-show .show-action {
   color: #88ba00;
