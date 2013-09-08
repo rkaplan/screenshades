@@ -213,6 +213,7 @@ ul.ui-autocomplete li {
   top: 10px;
   font-size: 18px;
   font-weight: lighter; 
+  cursor: pointer;
 }
 
 .tv-show .show-subtitle {
@@ -364,7 +365,6 @@ ul.ui-autocomplete li {
  * BOX 2 SPECIFIC STUFF: 
  * 
  */
-
 
 .tv-active {
   background-color: #0d1722;
