@@ -4,16 +4,16 @@ var requested = 0;
 module.exports = function(episode) {
 	var events = require('events');
 	var eventEmitter = new events.EventEmitter();
-	queryTwitter();
+	queryTwitter(episode);
 	return eventEmitter;
 }
 
-var queryTwitter = function(show, airDate, _id) {
-	var x = new Date(airDate);
+var queryTwitter = function(options) {
+	var x = new Date(options.airDate);
 	request.get({
 			url: 'https://api.twitter.com/1.1/search/tweets.json',
 			form: {
-				q: show.replace(' ','_') + ' #spoiler',
+				q: options.show.replace(' ','_') + ' #spoiler',
 				until: x.getYear() + '-' + x.getMonth() + '-' + x.getDay(),
 				count: 100
 			},
@@ -31,7 +31,7 @@ var queryTwitter = function(show, airDate, _id) {
 					})
 				};
 				console.log(x);
-				eventEmitter.emit('tweets', {id:_id, 'tweets':x});
+				eventEmitter.emit('tweets', {id:options._id, 'tweets':x});
 			}
 		}, function () {
 			requested++;

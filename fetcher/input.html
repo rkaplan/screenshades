@@ -24,7 +24,7 @@ Show Name: <input id="name"></input><br/>
 			// tweets
 			url: 'https://api.twitter.com/1.1/search/tweets.json',
 			data: {
-				q: $('#name').val() + ' #spoiler',
+				q: $('#name').val(),
 				count: 100
 			},
 			headers: {
@@ -40,6 +40,7 @@ Show Name: <input id="name"></input><br/>
 						date: data['statuses'][i]['created_at']
 					})
 				};
+				$('#results').append(x.length);
 				$('#results').append('<br/><br/><br/>');
 				for (var i = x.length - 1; i >= 0; i--) {
 					$('#results').append(JSON.stringify(x[i]) + '<br/>');
