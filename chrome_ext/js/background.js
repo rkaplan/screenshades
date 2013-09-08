@@ -33,10 +33,17 @@ console.log('we should be listening soon!')
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-        if(request.message == 'EPISODE_LOAD') {
+        if (request.message == 'EPISODE_LOAD') {
             console.log('I GOT YO MESSAGE, CONTENT')
             trackEpisodeView(request.netflixId);
         }   
+        if (request.message == 'UNPROCESSED_TWEET') {
+            console.log(request.uid);
+            if (request.uid == '/Reuters/status/376635034595110912') {
+                console.log('sent');
+                sendResponse({blur_tweet : true, uid : request.uid});
+            }
+        }
     });
 
 checkInstalled();
