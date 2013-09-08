@@ -39,7 +39,7 @@ chrome.runtime.onMessage.addListener(
         }   
         if (request.message == 'UNPROCESSED_TWEET') {
             console.log(request.uid);
-            if (request.uid == '/Reuters/status/376635034595110912') {
+            if (request.uid == '/JoeSchm36591640/status/376699976128012288') {
                 console.log('sent');
                 sendResponse({blur_tweet : true, uid : request.uid});
             }
