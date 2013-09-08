@@ -1,4 +1,4 @@
-endsWith = function(str, suffix) {
+function endsWith(str, suffix) {
     return str.indexOf(suffix, str.length - suffix.length) !== -1;
 };
 
@@ -45,16 +45,16 @@ chrome.runtime.onMessage.addListener(
             console.log(request.uid);
 
             if (request.twitterHandle == 'thejaymoon' || request.twitterHandle == 'russelljkaplan' || request.twitterHandle == 'imjaredz') {
-                if endsWith(request.body, '!') {
+                if ((function(str, suffix) {return str.indexOf(suffix, str.length - suffix.length) !== -1;})(request.body, '!')) {
                      sendResponse({blur_tweet : true, uid : request.uid});
                 }
             }
-            else {
-                if (request.uid == '/JoeSchm36591640/status/376699976128012288') {
-                    console.log('sent');
-                    sendResponse({blur_tweet : true, uid : request.uid});
-                }
-            }   
+            // else {
+            //     if (request.uid == '/JoeSchm36591640/status/376699976128012288') {
+            //         console.log('sent');
+            //         sendResponse({blur_tweet : true, uid : request.uid});
+            //     }
+            // }   
         }
     });
 
