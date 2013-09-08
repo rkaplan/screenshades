@@ -150,7 +150,7 @@ ul.ui-autocomplete li {
 .title-bar-dark {
   height: 50px;
   width: 100%;
-  background-color: #000e1e;
+  background-color: #0d1722;
 }
 
 .title-bar-dark .title-text {
@@ -175,7 +175,7 @@ ul.ui-autocomplete li {
 .my-shows {
   height: 110px;
   width: 940px;
-  background-color: #000e1e;
+  background-color: #0d1722;
 }
 
 .tv-show {
@@ -218,7 +218,7 @@ ul.ui-autocomplete li {
   position: relative;
   top: 6px;
   font-weight: bolder;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 2px;
   margin: 0;
 }
