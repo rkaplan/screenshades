@@ -112,6 +112,7 @@ ul.ui-autocomplete li {
 
 .status-bar .button-box {
   position: relative;
+  left: -8px;
   top: 16px;
   width: 175px;
   float: left;
@@ -141,21 +142,40 @@ ul.ui-autocomplete li {
 }
 
 .title-bar {
-  height: 60px;
+  height: 50px;
   width: 100%;
-  background-color: #07182a;
+  background-color: #1a2b3d;
+}
+
+.title-bar-dark {
+  height: 50px;
+  width: 100%;
+  background-color: #000e1e;
+}
+
+.title-bar-dark .title-text {
+  margin: 0;
+  border: 0px;
+  border-radius: 0px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  /*background-color: #07182a;*/
 }
 
 .available-shows {
-  height: 100px;
+  height: 110px;
   width: 940px;
-  background-color: #071728;
+  background-color: #1a2b3d;
 }
 
 .my-shows {
-  height: 100px;
+  height: 110px;
   width: 940px;
-  background-color: #051221;
+  background-color: #000e1e;
 }
 
 .tv-show {
@@ -164,8 +184,6 @@ ul.ui-autocomplete li {
   height: 100px;
   display: inline-block;
   cursor: pointer;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   /*border: 1px solid #fff;*/
 }
 
@@ -205,9 +223,6 @@ ul.ui-autocomplete li {
   margin: 0;
 }
 
-.available-shows .tv-show:first-child {
-  border-top-left-radius: 0px;
-}
 .available-shows .tv-show:hover {
   background-color: #051221;
 }
@@ -218,8 +233,6 @@ ul.ui-autocomplete li {
 .my-shows .tv-show .show-action {
   color: #ff3b30;
 }
-
-
 
 .box-2 .status-bar {
   background-color: #007aff;
@@ -250,10 +263,10 @@ ul.ui-autocomplete li {
   margin: 0;
   border: 0px;
   border-radius: 0px;
-  padding: 5px 12px;
+  padding: 4px 12px 5px 12px;
   font-size: 16px;
   color: #fff;
-  background-color: #07182a;
+  background-color: transparent;
 }
 
 .tt-hint {

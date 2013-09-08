@@ -10,6 +10,22 @@ $(document).ready(function() {
 			(-1 * boxSize * amount) + 'px');
 	}
 
+	function filterShows(text) {
+		console.log('filtering by ' + text);
+
+		var shows = $('.available-shows .tv-show');
+		shows.each(function(index) {
+			var el = $(this);
+			var title = el.find('.show-title')[0].innerText;
+			if(title.indexOf(text) === -1) {
+				el.hide();
+			}
+			else {
+				el.show();
+			}
+		});
+	}
+
 	// transition hooks:
 	$('.email-signup').click(function(e) {
 		scroll(1);
@@ -26,6 +42,19 @@ $(document).ready(function() {
 	$('.circular-button-3').click(function(e) {
 		scroll(3, true);
 	});
+
+
+	// search hook:
+	var searchBox = $('#search-shows');
+	searchBox.keyup(function(e) {
+		if(e.keyCode === 13) { // return key
+			searchBox.blur();
+		}
+		else {
+			var searchText = searchBox.val();
+			filterShows(searchText);
+		}
+	})
 
 	// search bar dropdown:
 	/*
