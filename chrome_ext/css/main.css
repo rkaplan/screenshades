@@ -44,6 +44,14 @@ a:hover, a:active {
   text-decoration: none;
 }
 
+ul.ui-autocomplete {
+  list-style-type: none;
+}
+
+ul.ui-autocomplete li {
+  list-style-type: none;
+}
+
 .header {
   text-align: center;
   margin-bottom: 50px;
@@ -88,75 +96,12 @@ a:hover, a:active {
   bottom: 0;
 }
 
-
-/* 
- * 
- * BOX 1 SPECIFIC STUFF: 
- * 
- */
-
-.box-1 .form-signup {
-  max-width: 505px;
-  padding: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
-  text-align: center;
-
-  background-color: #07182a;
-  border: 0px;
-  border-radius: 10px;
-
-  overflow: auto;
-  width: 100%
-}
-
-.box-1 .form-signup .form-control {
-  margin-bottom: 15px;
-  border: 0px;
-  border-radius: 5px;
-  padding: 21px 12px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #000c18;
-}
-
-.box-1 .form-signup .form-control:focus {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.box-1 .form-signup button, .form-signup button:hover {
-  width: 203px;
-  color: #fff;
-  border-radius: 5px;
-  padding: 8px 16px;
-}
-
-.box-1 .form-signup button.email-signup { 
-  float: left;
-  background-color: #3b6800;
-}
-.box-1 .form-signup button.fb-signup { 
-  float: right;
-  background-color: #0053a7;
-}
-
-.box-1 .form-signup #or {
-  position: relative;
-  top: 12px;
-}
-
-.box-1 .account-already {
-  text-align: center;
-  margin-bottom: 50px;
-}
+/* General box stuff */
 
 .status-bar {
   width: 100%;
   height: 60px;
   text-align: center;
-  background-color: #007aff;
 }
 
 .status-bar h3 {
@@ -193,6 +138,200 @@ a:hover, a:active {
   width: 175px;
   float: right;
   cursor: pointer;
+}
+
+.title-bar {
+  height: 60px;
+  width: 100%;
+  background-color: #07182a;
+}
+
+.available-shows {
+  height: 100px;
+  width: 940px;
+  background-color: #071728;
+}
+
+.my-shows {
+  height: 100px;
+  width: 940px;
+  background-color: #051221;
+}
+
+.tv-show {
+  padding: 10px;
+  width: 220px;
+  height: 100px;
+  display: inline-block;
+  cursor: pointer;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  /*border: 1px solid #fff;*/
+}
+
+.tv-show img {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 70px;
+  height: 80px;
+  display: inline-block;
+}
+
+.tv-show .show-title {
+  position: relative;
+  top: 10px;
+  font-size: 18px;
+  font-weight: lighter; 
+}
+
+.tv-show .show-subtitle {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, .5); 
+}
+
+.tv-show .show-action {
+  display: inline-block;
+  position: relative;
+  top: 6px;
+  font-weight: bolder;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.available-shows .tv-show:first-child {
+  border-top-left-radius: 0px;
+}
+.available-shows .tv-show:hover {
+  background-color: #051221;
+}
+.available-shows .tv-show .show-action {
+  color: #88ba00;
+}
+
+.my-shows .tv-show .show-action {
+  color: #ff3b30;
+}
+
+
+
+.box-2 .status-bar {
+  background-color: #007aff;
+}
+.box-3 .status-bar {
+  background-color: #5856d6;
+}
+.box-4 .status-bar {
+  background-color: #417c0c;
+}
+
+.form-control {
+  margin-bottom: 15px;
+  border: 0px;
+  border-radius: 5px;
+  padding: 21px 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #000c18;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#search-shows, .tt-hint, div[class^=tt-dataset] {
+  margin: 0;
+  border: 0px;
+  border-radius: 0px;
+  padding: 5px 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #07182a;
+}
+
+.tt-hint {
+  color: #bbb;
+}
+
+#search-shows, .tt-hint {
+  height: 60px;
+  position: relative;
+  left: 20px;
+}
+
+#search-shows:focus {
+  outline: none;
+  border: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.search-icon {
+  float: left;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+/* 
+ * 
+ * BOX 1 SPECIFIC STUFF: 
+ * 
+ */
+
+.box-1 .form-signup {
+  max-width: 505px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  text-align: center;
+
+  background-color: #07182a;
+  border: 0px;
+  border-radius: 10px;
+
+  overflow: auto;
+  width: 100%
+}
+
+.box-1 .form-signup .form-control {
+
+}
+
+.box-1 .form-signup button, .form-signup button:hover {
+  width: 203px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+
+.box-1 .form-signup button.email-signup { 
+  float: left;
+  background-color: #3b6800;
+}
+.box-1 .form-signup button.fb-signup { 
+  float: right;
+  background-color: #0053a7;
+}
+
+.box-1 .form-signup #or {
+  position: relative;
+  top: 12px;
+}
+
+.box-1 .account-already {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 /* 
