@@ -139,6 +139,8 @@ ul.ui-autocomplete li {
   width: 175px;
   float: right;
   cursor: pointer;
+  text-align: right;
+  padding-right: 20px;
 }
 
 .title-bar {
@@ -185,6 +187,7 @@ ul.ui-autocomplete li {
   height: 100px;
   display: inline-block;
   cursor: pointer;
+  -webkit-transition: background-color .2s ease;
   /*border: 1px solid #fff;*/
 }
 
