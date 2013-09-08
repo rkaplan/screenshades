@@ -3,6 +3,8 @@
         
 //  });
 // }
+var SERVER_URL = 'https://screenshades.herokuapp.com/';
+var USER_ID = 'thisisrussellimhardcoded';
 
 $(document).ready(function() {
 
@@ -19,9 +21,30 @@ $(document).ready(function() {
             (-1 * boxSize * amount) + 'px');
     }
 
+    function signupUser(email, password) {
+        console.log('about to sign someone up with email ' + email + ' and pass ' + password);
+        $.ajax({
+            type: 'POST',
+            url: SERVER_URL + 'signup',
+            data: {
+                email: email,
+                password: password,
+                deviceId: USER_ID
+            },
+            onSuccess: function(response) {
+                console.log('SIGNUP WORKED!');
+                console.log(response);
+                scroll(1);
+            }
+        })
+    }
+
     // transition hooks:
     $('.email-signup').click(function(e) {
-        scroll(1);
+        if($('#signupEmail').val() == '' || $('#signupPassword').val() == '')
+            return;
+        
+        signupUser($('#signupEmail').val(), $('#signupPassword').val());
     });
     $('.next-button').click(function(e) {
         scroll(1);
