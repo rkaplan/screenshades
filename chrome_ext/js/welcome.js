@@ -31,7 +31,7 @@ $(document).ready(function() {
                 password: password,
                 deviceId: USER_ID
             },
-            onSuccess: function(response) {
+            success: function(response) {
                 console.log('SIGNUP WORKED!');
                 console.log(response);
                 scroll(1);
@@ -43,7 +43,7 @@ $(document).ready(function() {
     $('.email-signup').click(function(e) {
         if($('#signupEmail').val() == '' || $('#signupPassword').val() == '')
             return;
-        
+
         signupUser($('#signupEmail').val(), $('#signupPassword').val());
     });
     $('.next-button').click(function(e) {
