@@ -22,7 +22,7 @@ function trackEpisodeView(netflixId) {
         url: SERVER_URL + 'u/show',
         data: data,
         headers: {'X-SHADES-AUTH': USER_ID},
-        onSuccess: function(response) {
+        success: function(response) {
             console.log('HOLY SHIT IT WORKED');
             console.log(response);
         }
