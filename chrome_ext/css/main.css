@@ -18,6 +18,14 @@ body {
   color: #fff;
 }
 
+#logo {
+  width: 47px;
+  height: 36px;
+  background: url('../icons/logo-main.png') no-repeat;
+  margin: 0px auto;
+  margin-top: 30px;
+}
+
 h1, h2, h3 {
   font-family: 'FreightSansBook', sans-serif;
   font-weight: lighter;
@@ -209,7 +217,7 @@ ul.ui-autocomplete li {
 }
 
 .tv-show .show-subtitle {
-  display: inline-block;
+  display: block;
   position: relative;
   top: 5px;
   margin: 0;
@@ -308,7 +316,7 @@ ul.ui-autocomplete li {
 
 .box-1 .form-signup {
   max-width: 505px;
-  padding: 15px;
+  padding: 18px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
@@ -357,3 +365,92 @@ ul.ui-autocomplete li {
  * BOX 2 SPECIFIC STUFF: 
  * 
  */
+
+.tv-active {
+  background-color: #0d1722;
+  height: 110px;
+}
+
+.title-bar .title-text {
+  margin: 0;
+  border: 0px;
+  border-radius: 0px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.list-seasons {
+  padding: 24px 0px 0px 25px;
+}
+
+.list-seasons li {
+  list-style: none;
+  display: inline;
+  padding-right: 48px;
+  font-size: 18px;
+  color: #ffffff; 
+}
+
+.list-seasons > .list-active {
+  color: #5856d6;
+  font-weight: bolder;
+}
+
+.tv-episodes {
+  height: 110px;
+  width: 940px;
+  background-color: #0d1722;
+}
+
+.tv-episode {
+  padding: 20px 10px 10px 15px;
+  margin-left: 9px;
+  width: 220px;
+  height: 100px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: background-color .2s ease;
+}
+
+.tv-episode .episode-title {
+  position: relative;
+  top: 10px;
+  font-size: 18px;
+  font-weight: lighter; 
+}
+
+.tv-episode .episode-subtitle {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, .5); 
+}
+
+.episode-active > .episode-title {
+  color: #5856d6;
+}
+
+.episode-active > .episode-subtitle {
+  color: #5856d6;
+  }
+
+.container-dark {
+  width: 940px;
+  height: 320px;
+  background-color: #0d1722;
+}
+
+.container-dark > p {
+  text-align: center;
+  font-size: 24px;
+  padding-top: 80px;
+  font-weight: lighter;
+  line-height: 150%;
+}
