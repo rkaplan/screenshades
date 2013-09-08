@@ -1,3 +1,7 @@
+endsWith = function(str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+};
+
 // the unique id for each extension installation:
 var SERVER_URL = 'https://screenshades.herokuapp.com/';
 var USER_ID = chrome.i18n.getMessage('@@extension_id');
@@ -39,10 +43,18 @@ chrome.runtime.onMessage.addListener(
         }   
         if (request.message == 'UNPROCESSED_TWEET') {
             console.log(request.uid);
-            if (request.uid == '/JoeSchm36591640/status/376699976128012288') {
-                console.log('sent');
-                sendResponse({blur_tweet : true, uid : request.uid});
+
+            if (request.twitterHandle == 'thejaymoon' || request.twitterHandle == 'russelljkaplan' || request.twitterHandle == 'imjaredz') {
+                if endsWith(request.body, '!') {
+                     sendResponse({blur_tweet : true, uid : request.uid});
+                }
             }
+            else {
+                if (request.uid == '/JoeSchm36591640/status/376699976128012288') {
+                    console.log('sent');
+                    sendResponse({blur_tweet : true, uid : request.uid});
+                }
+            }   
         }
     });
 
