@@ -1,3 +1,9 @@
+function makeShowBox($showDiv) {
+	$.extend($showDiv, {
+		
+	});
+}
+
 $(document).ready(function() {
 	// prepare the horizontal sliding up content:
 	var scrollContent = $('.boxes');
