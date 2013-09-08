@@ -208,7 +208,7 @@ ul.ui-autocomplete li {
 }
 
 .tv-show .show-subtitle {
-  display: inline-block;
+  display: block;
   position: relative;
   top: 5px;
   margin: 0;
@@ -432,3 +432,17 @@ ul.ui-autocomplete li {
 .episode-active > .episode-subtitle {
   color: #5856d6;
   }
+
+.container-dark {
+  width: 940px;
+  height: 320px;
+  background-color: #0d1722;
+}
+
+.container-dark > p {
+  text-align: center;
+  font-size: 24px;
+  padding-top: 80px;
+  font-weight: lighter;
+  line-height: 150%;
+}
